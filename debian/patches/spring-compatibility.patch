@@ -1,0 +1,14 @@
+Description: Fixes the compatibility with the version of Spring in Debian
+Author: Emmanuel Bourg <ebourg@apache.org>
+Forwarded: no
+--- a/xbean-spring/src/main/java/org/apache/xbean/spring/context/v2c/XBeanNamespaceHandler.java
++++ b/xbean-spring/src/main/java/org/apache/xbean/spring/context/v2c/XBeanNamespaceHandler.java
+@@ -131,7 +131,7 @@
+             BeanDefinitionParserDelegate.INIT_METHOD_ATTRIBUTE, 
+             BeanDefinitionParserDelegate.DESTROY_METHOD_ATTRIBUTE,
+             BeanDefinitionParserDelegate.ABSTRACT_ATTRIBUTE, 
+-            BeanDefinitionParserDelegate.SINGLETON_ATTRIBUTE, 
++            "singleton", 
+             BeanDefinitionParserDelegate.LAZY_INIT_ATTRIBUTE };
+ 
+     private static final String JAVA_PACKAGE_PREFIX = "java://";

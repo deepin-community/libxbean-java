@@ -1,0 +1,115 @@
+Description: Change "bundle" packaging to type to "jar".
+Author: Damien Raude-Morvan <drazzib@debian.org>
+Last-Update: 2011-07-19
+Forwarded: not-needed
+
+--- a/xbean-naming/pom.xml
++++ b/xbean-naming/pom.xml
+@@ -27,7 +27,7 @@
+     </parent>
+     <modelVersion>4.0.0</modelVersion>
+     <artifactId>xbean-naming</artifactId>
+-    <packaging>bundle</packaging>
++    <packaging>jar</packaging>
+     <name>Apache XBean :: Naming</name>
+     <description>xbean-naming implements a flexible non-persistent jndi provider</description>
+ 
+--- a/xbean-spring/pom.xml
++++ b/xbean-spring/pom.xml
+@@ -30,7 +30,7 @@
+     </parent>
+ 
+     <artifactId>xbean-spring</artifactId>
+-    <packaging>bundle</packaging>
++    <packaging>jar</packaging>
+     <name>Apache XBean :: Spring</name>
+ 
+     <description>xbean-spring provides a schema-driven proprietary namespace handler for spring contexts</description>
+--- a/xbean-telnet/pom.xml
++++ b/xbean-telnet/pom.xml
+@@ -30,7 +30,7 @@
+     </parent>
+ 
+     <artifactId>xbean-telnet</artifactId>
+-    <packaging>bundle</packaging>
++    <packaging>jar</packaging>
+     <name>Apache XBean :: Telnet</name>
+ 
+     <dependencies>
+--- a/xbean-finder/pom.xml
++++ b/xbean-finder/pom.xml
+@@ -28,7 +28,7 @@
+         <version>4.5</version>
+     </parent>
+     <artifactId>xbean-finder</artifactId>
+-    <packaging>bundle</packaging>
++    <packaging>jar</packaging>
+     <name>Apache XBean :: Classpath Resource Finder</name>
+     <description>XBean Finder helps to find annotations in classes</description>
+     <dependencies>
+--- a/xbean-asm5-shaded/pom.xml
++++ b/xbean-asm5-shaded/pom.xml
+@@ -28,7 +28,7 @@
+         <version>4.5</version>
+     </parent>
+     <artifactId>xbean-asm5-shaded</artifactId>
+-    <packaging>bundle</packaging>
++    <packaging>jar</packaging>
+     <name>Apache XBean :: ASM 5 shaded (repackaged)</name>
+ 
+     <description>Repackaged and shaded asm 5.x jars</description>
+--- a/xbean-blueprint/pom.xml
++++ b/xbean-blueprint/pom.xml
+@@ -30,7 +30,7 @@
+     </parent>
+ 
+     <artifactId>xbean-blueprint</artifactId>
+-    <packaging>bundle</packaging>
++    <packaging>jar</packaging>
+     <name>Apache XBean :: OSGI Blueprint Namespace Handler</name>
+ 
+     <description>xbean-blueprint provides a schema-driven namespace handler for Apache Aries Blueprint</description>
+--- a/xbean-bundleutils/pom.xml
++++ b/xbean-bundleutils/pom.xml
+@@ -26,7 +26,7 @@
+     </parent>
+ 
+     <artifactId>xbean-bundleutils</artifactId>
+-    <packaging>bundle</packaging>
++    <packaging>jar</packaging>
+     <name>Apache XBean OSGI Bundle Utilities</name>
+ 
+     <dependencies>
+--- a/xbean-classloader/pom.xml
++++ b/xbean-classloader/pom.xml
+@@ -30,7 +30,7 @@
+     </parent>
+ 
+     <artifactId>xbean-classloader</artifactId>
+-    <packaging>bundle</packaging>
++    <packaging>jar</packaging>
+     <name>Apache XBean :: Classloader</name>
+     <description>xbean-classloader includes a flexibie multi-parent classloader</description>
+     <build>
+--- a/xbean-classpath/pom.xml
++++ b/xbean-classpath/pom.xml
+@@ -30,7 +30,7 @@
+     </parent>
+ 
+     <artifactId>xbean-classpath</artifactId>
+-    <packaging>bundle</packaging>
++    <packaging>jar</packaging>
+     <name>Apache XBean :: ClassPath</name>
+ 
+ </project>
+--- a/xbean-reflect/pom.xml
++++ b/xbean-reflect/pom.xml
+@@ -28,7 +28,7 @@
+         <version>4.5</version>
+     </parent>
+     <artifactId>xbean-reflect</artifactId>
+-    <packaging>bundle</packaging>
++    <packaging>jar</packaging>
+     <name>Apache XBean :: Reflect</name>
+     <description>xbean-reflect provides very flexible ways to create objects and graphs of objects for DI frameworks</description>
+     <dependencies>

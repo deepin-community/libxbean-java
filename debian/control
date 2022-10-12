@@ -1,0 +1,80 @@
+Source: libxbean-java
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Torsten Werner <twerner@debian.org>,
+ Emmanuel Bourg <ebourg@apache.org>
+Build-Depends:
+ ant,
+ debhelper (>= 11),
+ default-jdk,
+ junit4,
+ libasm-java (>= 5.0),
+ libcglib-nodep-java,
+ libcommons-logging-java,
+ libeclipse-osgi-java,
+ liblog4j1.2-java,
+ libmaven-antrun-plugin-java,
+ libmaven-bundle-plugin-java,
+ libmaven-install-plugin-java,
+ libmaven-javadoc-plugin-java,
+ libmaven-plugin-tools-java (>= 2.8),
+ libmaven-shade-plugin-java,
+ libmaven3-core-java,
+ libosgi-compendium-java,
+ libosgi-core-java,
+ libqdox-java,
+ libslf4j-java,
+ libspring-beans-java,
+ libspring-context-java,
+ libspring-core-java,
+ libspring-web-java,
+ maven-debian-helper (>= 2.2)
+Standards-Version: 4.2.0
+Vcs-Git: https://salsa.debian.org/java-team/libxbean-java.git
+Vcs-Browser: https://salsa.debian.org/java-team/libxbean-java
+Homepage: http://geronimo.apache.org/xbean/
+
+Package: libxbean-java
+Architecture: all
+Depends: ${misc:Depends}, ${maven:Depends}, libxbean-reflect-java
+Suggests: ${maven:OptionalDepends}, libxbean-java-doc
+Description: plugin based Java application server
+ The goal of XBean project is to created a plugin based server analogous to
+ Eclipse being a plugin based IDE. XBean will be able to discover, download and
+ install server plugins from an Internet based repository. In addition, it
+ include support for multiple IoC systems, support for running with no IoC
+ system, JMX without JMX code, lifecycle and class loader management, and a rock
+ solid Spring integration.
+
+Package: libxbean-reflect-java
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: liblog4j1.2-java, libcommons-logging-java, libasm-java (>= 5.0)
+Breaks: libxbean-java (<< 4.5-6~)
+Replaces: libxbean-java (<< 4.5-6~)
+Description: plugin based Java application server (xbean-reflect)
+ The goal of XBean project is to created a plugin based server analogous to
+ Eclipse being a plugin based IDE. XBean will be able to discover, download and
+ install server plugins from an Internet based repository. In addition, it
+ include support for multiple IoC systems, support for running with no IoC
+ system, JMX without JMX code, lifecycle and class loader management, and a rock
+ solid Spring integration.
+ .
+ This package contains the xbean-reflect module which provides very flexible
+ ways to create objects and graphs of objects for DI frameworks.
+
+Package: libxbean-java-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Description: API documentation for XBean
+ The goal of XBean project is to created a plugin based server analogous to
+ Eclipse being a plugin based IDE. XBean will be able to discover, download and
+ install server plugins from an Internet based repository. In addition, it
+ include support for multiple IoC systems, support for running with no IoC
+ system, JMX without JMX code, lifecycle and class loader management, and a rock
+ solid Spring integration.
+ .
+ This package contains the API documentation for libxbean-java

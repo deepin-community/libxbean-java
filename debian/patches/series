@@ -1,0 +1,5 @@
+bundle.diff
+modules.diff
+DelegatingBundleContext.patch
+disable-javadoc-linksource.patch
+spring-compatibility.patch

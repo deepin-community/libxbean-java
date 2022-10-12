@@ -1,0 +1,38 @@
+From: Markus Koschany <apo@gambaru.de>
+Date: Thu, 12 Mar 2015 18:02:28 +0100
+Subject: DelegatingBundleContext
+
+Implement missing methods to make the package compile. However they are not
+supported.
+
+Forwarded: no
+---
+ .../apache/xbean/osgi/bundle/util/DelegatingBundleContext.java | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+diff --git a/xbean-bundleutils/src/main/java/org/apache/xbean/osgi/bundle/util/DelegatingBundleContext.java b/xbean-bundleutils/src/main/java/org/apache/xbean/osgi/bundle/util/DelegatingBundleContext.java
+index f4e876d..b83cd35 100644
+--- a/xbean-bundleutils/src/main/java/org/apache/xbean/osgi/bundle/util/DelegatingBundleContext.java
++++ b/xbean-bundleutils/src/main/java/org/apache/xbean/osgi/bundle/util/DelegatingBundleContext.java
+@@ -34,6 +34,8 @@ import org.osgi.framework.InvalidSyntaxException;
+ import org.osgi.framework.ServiceListener;
+ import org.osgi.framework.ServiceReference;
+ import org.osgi.framework.ServiceRegistration;
++import org.osgi.framework.ServiceFactory;
++import org.osgi.framework.ServiceObjects;
+ 
+ /**
+  * BundleContext for DelegatingBundle. 
+@@ -153,5 +155,11 @@ public class DelegatingBundleContext implements BundleContext {
+     public Bundle getBundle(String location) {
+         return bundleContext.getBundle(location);
+     }
+-    
++    public <S> ServiceObjects<S> getServiceObjects(ServiceReference<S> reference) {
++        throw new UnsupportedOperationException();
++    }
++    public <S> ServiceRegistration<S> registerService(Class<S> clazz, ServiceFactory<S> factory, Dictionary<String, ?> properties) {
++        throw new UnsupportedOperationException();
++    }
++
+ }

@@ -1,0 +1,2 @@
+target/site/apidocs/*  /usr/share/doc/libxbean-java/api/
+NOTICE                 /usr/share/doc/libxbean-java/

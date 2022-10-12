@@ -1,0 +1,17 @@
+Description: Don't build OSGI blueprint module (missing
+ depends in Debian)
+Author: Damien Raude-Morvan <drazzib@debian.org>
+Last-Update: 2011-07-19
+Forwarded: not-needed
+
+--- a/pom.xml
++++ b/pom.xml
+@@ -416,7 +416,7 @@
+         <module>xbean-finder</module>
+         <module>xbean-naming</module>
+         <module>xbean-reflect</module>
+-        <module>xbean-blueprint</module>
++<!--        <module>xbean-blueprint</module> -->
+         <module>xbean-spring</module>
+         <module>xbean-telnet</module>
+         <module>maven-xbean-plugin</module>

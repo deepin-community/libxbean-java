@@ -1,0 +1,246 @@
+libxbean-java (4.5-8) unstable; urgency=medium
+
+  * Team upload.
+  * Depend on libeclipse-osgi-java instead of libequinox-osgi-java
+  * Standards-Version updated to 4.2.0
+  * Use salsa.debian.org Vcs-* URLs
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 16 Aug 2018 01:31:01 +0200
+
+libxbean-java (4.5-7) unstable; urgency=medium
+
+  * Team upload.
+  * Switch to compat level 11.
+  * Declare compliance with Debian Policy 4.1.4.
+  * Remove Damien from Uploaders. (Closes: #889418)
+  * Use source/target 1.7.
+
+ -- Markus Koschany <apo@debian.org>  Mon, 30 Apr 2018 15:48:30 +0200
+
+libxbean-java (4.5-6) unstable; urgency=medium
+
+  * Team upload.
+  * Moved the xbean-reflect module to its own package
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 11 Sep 2017 21:05:26 +0200
+
+libxbean-java (4.5-5) unstable; urgency=medium
+
+  * Team upload.
+  * Transition to Maven 3
+  * Removed the bootstrapping
+  * No longer build the classloader, classpath, finder-shaded and telnet modules
+  * Standards-Version updated to 4.1.0
+  * Switch to debhelper level 10
+  * Converted debian/copyright to the Copyright Format 1.0
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 11 Sep 2017 17:21:53 +0200
+
+libxbean-java (4.5-4) unstable; urgency=medium
+
+  * Team upload.
+  * Added the missing dependency on ant (Closes: #832868)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 29 Jul 2016 11:07:51 +0200
+
+libxbean-java (4.5-3) unstable; urgency=medium
+
+  * Team upload.
+  * Depend on groovy instead of groovy2
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 16 May 2016 22:44:55 +0200
+
+libxbean-java (4.5-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fixed a compilation error with Spring 4.0
+  * Depend on libasm-java (>= 5.0) instead of libasm4-java
+  * Depend on libcglib-nodep-java instead of libcglib3-java
+  * Standards-Version updated to 3.9.8 (no changes)
+  * Use secure Vcs-* URLs
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 11 Apr 2016 00:34:50 +0200
+
+libxbean-java (4.5-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Thu, 10 Dec 2015 09:14:44 +0100
+
+libxbean-java (4.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Removed the Groovy and ASM patches (fixed upstream)
+  * Removed the HTML view of the source files from the javadoc
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 05 Oct 2015 09:07:44 +0200
+
+libxbean-java (4.3-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fixed a ClassNotFoundException in AsmParameterNameLoader (Closes: #789518)
+  * Transition to Groovy 2 (Closes: #733099)
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 07 Aug 2015 16:24:51 +0200
+
+libxbean-java (4.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 4.3.
+  * Deduplication: Use rdfind and symlinks to replace duplicate files.
+  * Add clean file and ensure that xbean can be built twice in a row.
+
+ -- Markus Koschany <apo@gambaru.de>  Sat, 06 Jun 2015 22:24:37 +0200
+
+libxbean-java (4.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 4.2.
+  * Add DelegatingBundleContext.patch to make the package compile. Implement
+    missing methods because of the switch to OSGI 6.
+  * Switch Vcs-Browser field to cgit.
+
+ -- Markus Koschany <apo@gambaru.de>  Mon, 04 May 2015 14:45:13 +0200
+
+libxbean-java (4.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Replaced the dependency on libcglib-java with libcglib3-java
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 03 Oct 2014 14:29:31 +0200
+
+libxbean-java (4.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patches and removed fix_osgi43.diff (updated upstream)
+    - Build the new xbean-asm-util module
+    - Replaced the dependency on libasm3-java with libasm4-java
+    - Added a new dependency on libequinox-osgi-java
+    - Added a build dependency on junit4
+  * Standards-Version updated to 3.9.6 (no changes)
+  * Switch to debhelper level 9
+  * Moved the package to Git
+  * Use XZ compression for the upstream tarball
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 29 Sep 2014 09:43:26 +0200
+
+libxbean-java (3.7-6) unstable; urgency=low
+
+  * Team upload.
+  * Update Maven settings to use correct coordinates for Groovy 1.8.x.
+  * Bump Standards-Version to 3.9.5. No changes were required.
+  * Use canonical URLs in Vcs-* fields.
+
+ -- Miguel Landaeta <nomadium@debian.org>  Mon, 26 May 2014 12:51:32 -0300
+
+libxbean-java (3.7-5) unstable; urgency=low
+
+  * Team upload.
+  * Add --java-lib flag to install jars in /usr/share/java directory.
+    (Closes: #676245).
+  * Bump Standards-Version to 3.9.3. No changes were required.
+
+ -- Miguel Landaeta <miguel@miguel.cc>  Tue, 05 Jun 2012 20:30:59 -0430
+
+libxbean-java (3.7-4) unstable; urgency=low
+
+  * Fix "FTBFS: Error Building Apache XBean OSGI Bundle Utilities":
+    New d/patches/fix_osgi_43.diff. (Closes: #648660)
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Sun, 20 Nov 2011 18:52:33 +0100
+
+libxbean-java (3.7-3) unstable; urgency=low
+
+  * Depends and Build-Depends on libosgi-core-java and libosgi-compendium-java
+    instead of libequinox-osgi-java.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Mon, 24 Oct 2011 20:11:18 +0200
+
+libxbean-java (3.7-2) unstable; urgency=low
+
+  * Team upload.
+  * Add Build-Depends on libmaven-plugin-tools-java (>= 2.8). (Closes: #640750).
+
+ -- Miguel Landaeta <miguel@miguel.cc>  Wed, 14 Sep 2011 00:41:41 +0200
+
+libxbean-java (3.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add myself as Uploaders.
+  * d/control: replace "we" by "it" in packages' descriptions.
+  * Install javadoc into /usr/share/doc/libxbean-java/api/.
+  * d/control: Move groovy from Recommends to Suggests (Closes: #632365).
+  * Re-add B-D on quilt to be able to use patchsys-quilt.mk.
+  * Change default build system to Maven:
+    - d/control: B-D on maven-debian-helper, libmaven-antrun-plugin-java,
+      libmaven-bundle-plugin-java, libmaven-javadoc-plugin-java
+      and libcglib-java.
+    - d/rules.full: Use maven.mk from CDBS.
+    - d/patches/full.series: Use this series for normal build.
+  * Provide a way for "bootstrap" without Maven.
+    - debian/rules.bootstrap: Copy of old ant debian/rules.
+    - Used when using DEB_BUILD_OPTIONS="bootstrap"
+    - d/patches/bootstrap.series: Use this series for bootstrap build.
+  * Bump Standards-Version to 3.9.2: no changes needed.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Thu, 21 Jul 2011 21:20:53 +0200
+
+libxbean-java (3.5-4) unstable; urgency=low
+
+  * Team Upload.
+  * Enable Spring module:
+   - Update d/build.xml
+   - d/control: Add Build-D on libspring-*-java and libqdox.
+   - d/rules: Add spring-* and qdox into classpath.
+  * Update Standards-Version to 3.9.1: no changes needed.
+  * Switch to 3.0 (quilt) format.
+  * Bump debhelper compat level to 7.
+  * Switch to default-jdk:
+    - d/control: Build-Depends on default-jdk.
+    - d/rules: JAVA_HOME set to default-java.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Wed, 30 Mar 2011 21:03:36 +0200
+
+libxbean-java (3.5-3) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Torsten Werner <twerner@debian.org>  Sun, 09 Aug 2009 12:45:23 +0200
+
+libxbean-java (3.5-2) experimental; urgency=low
+
+  * Change section to java, bump up Standards-Version to 3.8.1
+  * Add the Maven POM to the package,
+  * Add a Build-Depends-Indep dependency on maven-repo-helper
+  * Use mh_installpom and mh_installjar to install the POM and the jar to the
+    Maven repository
+  * Add ${misc:Depends} to Depends to clear Lintian warnings
+  * Add a Recommends: on the binary package to indicate the optional packages
+    used by XBean
+  * Put the API documentation in a separate package
+  * Remove copy of maven-build.xml as maven-ant-helper now supports compiling
+    Java 1.5 sources.
+
+ -- Ludovic Claude <ludovic.claude@laposte.net>  Tue, 05 May 2009 18:10:17 +0100
+
+libxbean-java (3.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 17 Feb 2009 22:37:52 +0100
+
+libxbean-java (3.4.3-2) unstable; urgency=low
+
+  * Fix debian/copyright.
+
+ -- Torsten Werner <twerner@debian.org>  Sun, 30 Nov 2008 02:59:00 +0100
+
+libxbean-java (3.4.3-1) unstable; urgency=low
+
+  * Initial release. (Closes: #507284)
+
+ -- Torsten Werner <twerner@debian.org>  Sat, 29 Nov 2008 19:52:17 +0100

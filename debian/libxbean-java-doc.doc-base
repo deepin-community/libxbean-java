@@ -1,0 +1,11 @@
+Document: libxbean-java
+Title: Programmer API for XBean
+Author: Apache Commons Lang developers
+Abstract: The goal of XBean project is to created a plugin based server analogous to
+ Eclipse being a plugin based IDE. XBean will be able to discover, download and
+ install server plugins from an Internet based repository.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/libxbean-java/api/index.html
+Files: /usr/share/doc/libxbean-java/api/*

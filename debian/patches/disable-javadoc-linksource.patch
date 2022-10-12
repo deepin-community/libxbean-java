@@ -1,0 +1,14 @@
+Description: Remove the HTML view of the source files from the javadoc
+Author: Emmanuel Bourg <ebourg@apache.org>
+Forwarded: not-needed
+--- a/pom.xml
++++ b/pom.xml
+@@ -442,7 +442,7 @@
+ 
+                     <additionalparam>-J-Djava.awt.headless=true</additionalparam>
+                     -->
+-                    <linksource>true</linksource>
++                    <linksource>false</linksource>
+                     <links>
+                         <!-- JSE -->
+                         <link>http://java.sun.com/j2se/1.5.0/docs/api/</link>

@@ -1,0 +1,38 @@
+Boostrapping without Maven buildsystem
+======================================
+
+As libxbean-java is actually used by some parts of Maven itself [1], you
+might want to bootstrap libxbean-java without Maven, to break
+cyclic build-dependencies.
+
+debian/rules support using some custom ant script for this task.
+It'll be used if you pass "bootstrap" string in DEB_BUILD_OPTIONS.
+
+For example,
+  DEB_BUILD_OPTIONS="bootstrap" dpkg-buildpackage -us -uc -d
+
+  [From SVN repository, you can use:]
+  DEB_BUILD_OPTIONS="bootstrap" svn-buildpackage --svn-builder="pdebuild --pbuilder cowbuilder --debbuildopts '-us -uc -d'"
+  
+
+[1] build-rdeps of libxbean-java in main
+    maven-plugin-tools (just transitive-Depends)
+    maven-file-management (just transitive-Depends)
+    plexus-containers (used in XBeanComponentBuilder.java)
+    
+Patches
+=======
+
+Since we don't use "quilt (3.0)" format tools to handle our patches, we need
+to change list of patches on-the-fly during build phase.
+
+In debian/rules.bootstrap we use :
+    export QUILT_SERIES=bootstrap.series
+
+Whereas in debian/rules.full we use :
+    export QUILT_SERIES=full.series
+
+If you wan't to edit this package's patches, you'll have to do this before
+any quilt push / quilt edit.
+
+ -- Damien Raude-Morvan <drazzib@debian.org>  Mon, 18 Jul 2011 00:11:34 +0200
